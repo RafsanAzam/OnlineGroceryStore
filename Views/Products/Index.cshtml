@@ -1,0 +1,9 @@
+﻿@model IEnumerable<OnlineGroceryStore.Models.Product>
+
+<h2>Products</h2>
+<ul>
+    @foreach(var product in Model)
+    {
+        <li>@product.Name</li>
+    }
+</ul>

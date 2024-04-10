@@ -18,6 +18,13 @@ namespace OnlineGroceryStore.Models.Data
             modelBuilder.Entity<Order>()
                 .HasOne(o => o.User)
                 .WithMany(u => u.Orders).HasForeignKey(o => o.UserId);
+
+            modelBuilder.Entity<Product>().HasData(
+                new Product { ProductId = 1, Name = "Apple", Price = 0.50 },
+                new Product { ProductId = 2, Name = "Banana", Price = 0.30 },
+                new Product { ProductId = 3, Name = "Carrot", Price = 0.20 }
+                // Add as many Products as you need here
+            );
         }
 
     }
