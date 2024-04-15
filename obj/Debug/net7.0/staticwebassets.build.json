@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5Qg6Op01VmUq49W/TEs7/IPF7FGVkhS9qac9Dr9/yeQ=",
+  "Hash": "oYk+XCRaCCEGRmUSUELPIncVPU3Fr2NUREeK8s+jQvA=",
   "Source": "OnlineGroceryStore",
   "BasePath": "_content/OnlineGroceryStore",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\logo.png",
+      "SourceId": "OnlineGroceryStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\",
+      "BasePath": "_content/OnlineGroceryStore",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
       "Identity": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\js\\site.js",

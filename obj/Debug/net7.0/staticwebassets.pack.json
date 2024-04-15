@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
       "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
