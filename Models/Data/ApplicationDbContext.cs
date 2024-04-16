@@ -22,16 +22,24 @@ namespace OnlineGroceryStore.Models.Data
 
             // Configure Product-Category Relationships (One-to-Many)
             modelBuilder.Entity<Product>()
-                .HasOne(p => p.Category)  // Each product has one category
-                .WithMany(c => c.Products)  // Each category has many products
-                .HasForeignKey(p => p.CategoryId);  // Foreign key in Product table
+               .HasOne(p => p.Category)
+               .WithMany(c => c.Products)
+               .HasForeignKey(p => p.CategoryId)
+               .OnDelete(DeleteBehavior.Restrict);  // Prevent deletion of category if products exist
 
-            // Configure Category Self-Referencing for Sub-Categories (One-to-Many)
-            modelBuilder.Entity<Category>()
-                .HasOne(c => c.ParentCategory)  // Each sub-category has one parent category
-                .WithMany(c => c.SubCategories)  // Each parent category has many sub-categories
-                .HasForeignKey(c => c.ParentCategoryId)  // Nullable foreign key in Category table
-                .OnDelete(DeleteBehavior.Restrict);  // Prevent deletion of a category if it has sub-categories
+            // Configure Product-SubCategory Relationships (One-to-Many)
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.SubCategory)
+                .WithMany(sc => sc.Products)
+                .HasForeignKey(p => p.SubCategoryId)
+                .OnDelete(DeleteBehavior.Restrict);  // Prevent deletion of subcategory if products exist
+
+            // Configure Category-SubCategory Relationships (One-to-Many)
+            modelBuilder.Entity<SubCategory>()
+                .HasOne(sc => sc.Category)
+                .WithMany(c => c.SubCategories)
+                .HasForeignKey(sc => sc.CategoryId)
+                .OnDelete(DeleteBehavior.Cascade);  // Cascade delete subcategories when a category is deleted
 
             // Configure Order-OrderDetail Relationships (One-to-Many)
             modelBuilder.Entity<OrderDetail>()
@@ -57,26 +65,34 @@ namespace OnlineGroceryStore.Models.Data
                 .HasMaxLength(50);
 
 
-            // Seed Categories with Sub-Categories
+            // Seed data for Categories
             modelBuilder.Entity<Category>().HasData(
-                new Category { CategoryId = 1, Name = "Fruits", ParentCategoryId = null },
-                new Category { CategoryId = 2, Name = "Vegetables", ParentCategoryId = null },
-                new Category { CategoryId = 3, Name = "Dairy", ParentCategoryId = null },
-
-                // Adding sub-categories
-                new Category { CategoryId = 4, Name = "Citrus Fruits", ParentCategoryId = 1 },
-                new Category { CategoryId = 5, Name = "Stone Fruits", ParentCategoryId = 1 },
-                new Category { CategoryId = 6, Name = "Root Vegetables", ParentCategoryId = 2 },
-                new Category { CategoryId = 7, Name = "Leafy Greens", ParentCategoryId = 2 },
-                new Category { CategoryId = 8, Name = "Milk", ParentCategoryId = 3 },
-                new Category { CategoryId = 9, Name = "Cheese", ParentCategoryId = 3 }
+                new Category { CategoryId = 1, Name = "Fruits" },
+                new Category { CategoryId = 2, Name = "Vegetables" },
+                new Category { CategoryId = 3, Name = "Dairy" },
+                new Category { CategoryId = 4, Name = "Beverages" }
             );
 
-            // Seed Products
+            // Seed data for Sub-Categories
+            modelBuilder.Entity<SubCategory>().HasData(
+                new SubCategory { SubCategoryId = 1, Name = "Citrus", CategoryId = 1 },
+                new SubCategory { SubCategoryId = 2, Name = "Root", CategoryId = 2 },
+                new SubCategory { SubCategoryId = 3, Name = "Leafy Greens", CategoryId = 2 },
+                new SubCategory { SubCategoryId = 4, Name = "Milk", CategoryId = 3 },
+                new SubCategory { SubCategoryId = 5, Name = "Cheese", CategoryId = 3 },
+                new SubCategory { SubCategoryId = 6, Name = "Sodas", CategoryId = 4 },
+                new SubCategory { SubCategoryId = 7, Name = "Juices", CategoryId = 4 }
+            );
+
+            // Seed data for Products
             modelBuilder.Entity<Product>().HasData(
-                new Product { ProductId = 1, Name = "Apple", Price = 0.50, CategoryId = 1, Description = "Fresh Apples", StockQuantity = 100 },
-                new Product { ProductId = 2, Name = "Banana", Price = 0.30, CategoryId = 1, Description = "Organic Bananas", StockQuantity = 80 },
-                new Product { ProductId = 3, Name = "Carrot", Price = 0.20, CategoryId = 2, Description = "Garden Fresh Carrots", StockQuantity = 150 }
+                new Product { ProductId = 1, Name = "Orange", Price = 0.50, SubCategoryId = 1, CategoryId = 1, Description = "Fresh Oranges", StockQuantity = 150 },
+                new Product { ProductId = 2, Name = "Carrot", Price = 0.20, SubCategoryId = 2, CategoryId = 2, Description = "Organic Carrots", StockQuantity = 200 },
+                new Product { ProductId = 3, Name = "Spinach", Price = 1.00, SubCategoryId = 3, CategoryId = 2, Description = "Fresh Spinach", StockQuantity = 100 },
+                new Product { ProductId = 4, Name = "Whole Milk", Price = 0.89, SubCategoryId = 4, CategoryId = 3, Description = "Creamy Whole Milk", StockQuantity = 300 },
+                new Product { ProductId = 5, Name = "Cheddar Cheese", Price = 2.50, SubCategoryId = 5, CategoryId = 3, Description = "Aged Cheddar Cheese", StockQuantity = 95 },
+                new Product { ProductId = 6, Name = "Coca Cola", Price = 1.25, SubCategoryId = 6, CategoryId = 4, Description = "Classic Coca Cola", StockQuantity = 500 },
+                new Product { ProductId = 7, Name = "Apple Juice", Price = 1.50, SubCategoryId = 7, CategoryId = 4, Description = "Pure Apple Juice", StockQuantity = 150 }
             );
 
         }
