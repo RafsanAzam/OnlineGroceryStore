@@ -25,4 +25,7 @@ body {
     transition: transform 0.3s ease;
 }
 
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Makes the image 10% larger when hovered */
+}
 
