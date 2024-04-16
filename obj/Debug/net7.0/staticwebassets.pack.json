@@ -13,8 +13,32 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\download.png",
+      "PackagePath": "staticwebassets\\images\\download.png"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\download.svg",
+      "PackagePath": "staticwebassets\\images\\download.svg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\logo-white.svg",
+      "PackagePath": "staticwebassets\\images\\logo-white.svg"
+    },
+    {
       "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\logo.svg",
+      "PackagePath": "staticwebassets\\images\\logo.svg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\logo.svg.svg",
+      "PackagePath": "staticwebassets\\images\\logo.svg.svg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\vector-logo-grocery-store-vector-logo-grocery-store-white-sign-cooking-oil-french-baguette-fresh-fruits-124088771.webp",
+      "PackagePath": "staticwebassets\\images\\vector-logo-grocery-store-vector-logo-grocery-store-white-sign-cooking-oil-french-baguette-fresh-fruits-124088771.webp"
     },
     {
       "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\js\\site.js",
