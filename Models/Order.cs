@@ -7,10 +7,8 @@ namespace OnlineGroceryStore.Models
     {
         [Key]
         public int OrderId { get; set; }
-        [Required]
-        public int UserId { get; set; }
         public DateTime OrderDate { get; set; }
-        [ForeignKey("UserId")]
-        public  User User { get; set; }
+        public List<OrderDetail> OrderDetails { get; set; }
+
     }
 }
