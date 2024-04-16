@@ -7,5 +7,6 @@ namespace OnlineGroceryStore.Models
         public int CategoryId { get; set; }
         public string Name { get; set; }
         public List<SubCategory> SubCategories { get; set; }
+        public List<Product> Products { get; set; }  // Products directly associated with this category
     }
 }
