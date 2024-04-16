@@ -12,5 +12,8 @@ namespace OnlineGroceryStore.Models
         public int CategoryId { get; set; }
         public int StockQuantity { get; set; }
         public Category Category { get; set; }
+
+        // Collection of OrderDetails
+        public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
     }
 }
