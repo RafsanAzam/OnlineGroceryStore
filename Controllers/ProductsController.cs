@@ -18,6 +18,21 @@ namespace OnlineGroceryStore.Controllers
             return View(products);
         }
 
+        // List products by category or subcategory
+        public async Task<IActionResult> Index(int? categoryId, int? subCategoryId)
+        {
+            var query = _context.Products.AsQueryable();
+            if (categoryId.HasValue)
+            {
+                query = query.Where(p => p.CategoryId == categoryId);
+            }
+            if (subCategoryId.HasValue)
+            {
+                query = query.Where(p => p.SubCategoryId == subCategoryId);
+            }
+            var products = await query.Include(p => p.Category).Include(p => p.SubCategory).ToListAsync();
+            return View(products);
+        }
 
         public IActionResult Create()
         {
