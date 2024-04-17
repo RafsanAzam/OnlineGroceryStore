@@ -18,6 +18,7 @@ namespace OnlineGroceryStore.Controllers
             return View(products);
         }
 
+
         public IActionResult Create()
         {
             return View();
@@ -94,6 +95,7 @@ namespace OnlineGroceryStore.Controllers
 
             }
             return View(product);
-        }   
+        }
+        
     }
 }
