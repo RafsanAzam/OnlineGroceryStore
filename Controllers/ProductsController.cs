@@ -12,13 +12,10 @@ namespace OnlineGroceryStore.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index()
-        {
-            var products = await _context.Products.ToListAsync();
-            return View(products);
-        }
 
-        // List products by category or subcategory
+        // GET: Products
+        // GET: Products?categoryId=1
+        // GET: Products?categoryId=1&subCategoryId=2
         public async Task<IActionResult> Index(int? categoryId, int? subCategoryId)
         {
             var query = _context.Products.AsQueryable();
@@ -30,6 +27,7 @@ namespace OnlineGroceryStore.Controllers
             {
                 query = query.Where(p => p.SubCategoryId == subCategoryId);
             }
+            // If no categories are selected, it will default to showing all products
             var products = await query.Include(p => p.Category).Include(p => p.SubCategory).ToListAsync();
             return View(products);
         }
