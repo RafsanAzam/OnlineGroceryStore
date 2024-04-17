@@ -1,9 +1,24 @@
 ﻿@model IEnumerable<OnlineGroceryStore.Models.Product>
 
 <h2>Products</h2>
-<ul>
-    @foreach(var product in Model)
-    {
-        <li>@product.Name</li>
-    }
-</ul>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Subcategory</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price.ToString("C")</td>
+                <td>@product.Category.Name</td>
+                <td>@product.SubCategory?.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
