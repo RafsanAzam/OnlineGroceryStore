@@ -4,6 +4,7 @@ using OnlineGroceryStore.Models.Data;
 
 namespace OnlineGroceryStore.ViewComponents
 {
+    [ViewComponent(Name = "CategoryNavigationViewComponent")] //Solution
     public class CategoryNavigationViewComponent : ViewComponent
     {
         private readonly ApplicationDbContext _context;

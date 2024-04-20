@@ -25,6 +25,7 @@
                             <input class="form-control form-control-sm mr-2" type="search" placeholder="Search products" aria-label="Search" name="searchTerm">
                             <button class="btn btn-outline-success btn-sm my-2 my-sm-0" type="submit">Search</button>
                         </form>
+                        
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
@@ -37,6 +38,8 @@
         </nav>
     </header>
     <div class="container">
+        <!-- Invoke Category Navigation View Component here -->
+        @await Component.InvokeAsync("CategoryNavigationViewComponent")
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

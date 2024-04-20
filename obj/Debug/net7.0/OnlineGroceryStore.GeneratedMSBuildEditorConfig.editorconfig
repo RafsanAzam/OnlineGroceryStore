@@ -36,8 +36,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/2024/ASP .NET Core MVC Project/OnlineGroceryStore/OnlineGroceryStore/Views/Shared/Components/CategoryNavigation/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcnlOYXZpZ2F0aW9uXERlZmF1bHQuY3NodG1s
+[F:/2024/ASP .NET Core MVC Project/OnlineGroceryStore/OnlineGroceryStore/Views/Shared/Components/CategoryNavigationViewComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcnlOYXZpZ2F0aW9uVmlld0NvbXBvbmVudFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/2024/ASP .NET Core MVC Project/OnlineGroceryStore/OnlineGroceryStore/Views/Shared/Error.cshtml]
