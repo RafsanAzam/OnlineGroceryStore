@@ -6,9 +6,15 @@ namespace OnlineGroceryStore.Models
     {
         [Key]
         public int ProductId { get; set; }
+        [Required]
+        [MaxLength(100)]
         public string Name { get; set; }
+        [Required]
+        [DataType(DataType.Currency)]
         public double Price { get; set; }
         public string Description { get; set; }
+        //public string ImagePath { get; set; } // Added ImagePath for product images
+
         public int CategoryId { get; set; }
         public Category Category { get; set; }
         public int SubCategoryId { get; set; }

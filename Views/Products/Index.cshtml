@@ -1,24 +1,18 @@
 ﻿@model IEnumerable<OnlineGroceryStore.Models.Product>
 
-<h2>Products</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Category</th>
-            <th>Subcategory</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var product in Model)
-        {
-            <tr>
-                <td>@product.Name</td>
-                <td>@product.Price.ToString("C")</td>
-                <td>@product.Category.Name</td>
-                <td>@product.SubCategory?.Name</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4">
+            <div class="card">
+                @*<img class="card-img-top" src="@product.ImagePath" alt="@product.Name">*@
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                    <p class="card-text">$@product.Price</p>
+                    <p class="card-text">@(product.StockQuantity > 0 ? "In Stock" : "Out of Stock")</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
