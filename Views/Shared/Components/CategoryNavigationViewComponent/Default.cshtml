@@ -1,23 +1,19 @@
 ﻿<div>
     <h4>Categories</h4>
-    <ul class="nav flex-column">
-        @foreach (var category in Model)
-        {
-            <li class="nav-item">
-                <a class="nav-link" asp-controller="Products" asp-action="Index" asp-route-categoryId="@category.CategoryId">
-                    @category.Name
-                </a>
-                <ul class="nav flex-column">
-                    @foreach (var subCategory in category.SubCategories)
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Products" asp-action="Index" asp-route-categoryId="@category.CategoryId" asp-route-subCategoryId="@subCategory.SubCategoryId">
-                                @subCategory.Name
-                            </a>
-                        </li>
-                    }
-                </ul>
-            </li>
-        }
-    </ul>
+    @foreach (var category in Model)
+    {
+        <button class="accordion">@category.Name</button>
+        <div class="panel">
+            <ul>
+                @foreach (var subCategory in category.SubCategories)
+                {
+                    <li>
+                        <a href="@Url.Action("Index", "Products", new { categoryId = subCategory.CategoryId, subCategoryId = subCategory.SubCategoryId })">
+                            @subCategory.Name
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
 </div>
