@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EM/2i6Tk7SFDkxGZ+qmKIa95mjWhkkypwTw3m8XwkM0=",
+  "Hash": "+ijPQ+AJnX8asBMeQbJYFkD/cxuJ4iZBJBkhzvpVhEA=",
   "Source": "OnlineGroceryStore",
   "BasePath": "_content/OnlineGroceryStore",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\fruits-basket.jpg",
+      "SourceId": "OnlineGroceryStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\",
+      "BasePath": "_content/OnlineGroceryStore",
+      "RelativePath": "images/fruits-basket.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fruits-basket.jpg"
     },
     {
       "Identity": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\logo.svg",

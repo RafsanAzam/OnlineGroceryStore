@@ -52,3 +52,48 @@ body {
     background-color: white;
     overflow: hidden;
 }
+
+.hero-section .hero-image {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: url('/images/Trolly.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.hero-section .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.hero-section .hero-text h1 {
+    font-size: 3.5rem; /* Large text for the main heading */
+}
+
+    .hero-section .hero-text p {
+        margin-bottom: 1rem;
+    }
+
+    .hero-section .hero-text .btn {
+        /* Button customization */
+        padding: 0.75rem 2rem;
+        font-size: 1.2rem; /* Larger font for the button */
+        text-transform: uppercase; /* Style preference */
+    }
+
+/* Overlay for text contrast */
+.hero-section .hero-image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+}
+
+/* Remove default margin from the body */

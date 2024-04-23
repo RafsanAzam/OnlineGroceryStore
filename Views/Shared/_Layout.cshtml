@@ -38,13 +38,15 @@
         </nav>
     </header>
     <div class="container">
-        <!-- Invoke Category Navigation View Component here -->
-        @await Component.InvokeAsync("CategoryNavigationViewComponent")
         <main role="main" class="pb-3">
             @RenderBody()
+            <!-- Invoke Category Navigation View Component here -->
+            @if (!ViewData.ContainsKey("HideCategoryNavigation"))
+            {
+                @await Component.InvokeAsync("CategoryNavigationViewComponent")
+            }
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - OnlineGroceryStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
