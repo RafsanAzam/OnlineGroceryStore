@@ -4,7 +4,7 @@
 }
 
 .banner-image {
-    background-image: url('/images/banner2.jpeg');
+    background-image: url('/images/home-bg.jpg');
     width: 100%;
     height: 500px; /* Adjust the height as needed */
     background-size: cover;
