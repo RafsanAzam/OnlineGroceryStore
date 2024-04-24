@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\OnlineGroceryStore.bundle.scp.css"
     },
     {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\css\\category.css",
+      "PackagePath": "staticwebassets\\css\\category.css"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
       "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -13,8 +21,40 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Trolly.jpg",
+      "PackagePath": "staticwebassets\\images\\Trolly.jpg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\banner.png",
+      "PackagePath": "staticwebassets\\images\\banner.png"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\banner2.jpeg",
+      "PackagePath": "staticwebassets\\images\\banner2.jpeg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\cat-1.png",
+      "PackagePath": "staticwebassets\\images\\cat-1.png"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\cat-2.png",
+      "PackagePath": "staticwebassets\\images\\cat-2.png"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\cat-3.png",
+      "PackagePath": "staticwebassets\\images\\cat-3.png"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\cat-4.png",
+      "PackagePath": "staticwebassets\\images\\cat-4.png"
+    },
+    {
       "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\fruits-basket.jpg",
       "PackagePath": "staticwebassets\\images\\fruits-basket.jpg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\home-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\home-bg.jpg"
     },
     {
       "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\logo.svg",

@@ -1,0 +1,45 @@
+﻿.banner-section {
+    width: 100%;
+    display: block;
+}
+
+.banner-image {
+    background-image: url('/images/banner2.jpeg');
+    width: 100%;
+    height: 500px; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    color: #fff; /* Choose a text color that stands out */
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.banner-content p {
+    font-size: 1.5rem;
+    color: #fff; /* Choose a text color that stands out */
+    margin-bottom: 2rem;
+}
+
+.banner-content .btn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.banner-content .btn:hover {
+    background-color: #0056b3; /* Darker shade for hover state */
+}
+
+

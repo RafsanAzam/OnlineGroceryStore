@@ -67,11 +67,12 @@ namespace OnlineGroceryStore.Models.Data
 
             // Seed data for Categories
             modelBuilder.Entity<Category>().HasData(
-                new Category { CategoryId = 1, Name = "Fruits" },
-                new Category { CategoryId = 2, Name = "Vegetables" },
-                new Category { CategoryId = 3, Name = "Dairy" },
-                new Category { CategoryId = 4, Name = "Beverages" }
+                new Category { CategoryId = 1, Name = "Fruits", ImageUrl = "/images/cat-1.png" },
+                new Category { CategoryId = 2, Name = "Vegetables", ImageUrl = "/images/cat-2.png" },
+                new Category { CategoryId = 3, Name = "Dairy", ImageUrl = "/images/cat-3.png" },
+                new Category { CategoryId = 4, Name = "Beverages", ImageUrl = "/images/cat-4.png" }
             );
+
 
             // Seed data for Sub-Categories
             modelBuilder.Entity<SubCategory>().HasData(

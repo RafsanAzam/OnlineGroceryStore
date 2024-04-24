@@ -1,19 +1,21 @@
-﻿<div>
-    <h4>Categories</h4>
-    @foreach (var category in Model)
-    {
-        <button class="accordion">@category.Name</button>
-        <div class="panel">
-            <ul>
-                @foreach (var subCategory in category.SubCategories)
-                {
-                    <li>
-                        <a href="@Url.Action("Index", "Products", new { categoryId = subCategory.CategoryId, subCategoryId = subCategory.SubCategoryId })">
-                            @subCategory.Name
-                        </a>
-                    </li>
-                }
-            </ul>
-        </div>
-    }
+﻿<div class="container my-5">
+    <h2 class="text-center mb-4">SHOP BY CATEGORY</h2>
+    <div class="row">
+        @foreach (var category in Model)
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <div class="card h-100">
+                    <img src="@category.ImageUrl")" class="card-img-top" alt="@category.Name">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">@category.Name</h5>
+                        <p class="card-text">Some quick example text to build on the category and make up the bulk of the card's content.</p>
+                        <a href="@Url.Action("Index", "Products", new { categoryId = category.CategoryId })" class="mt-auto btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>
+@section Styles {
+    <link href="~/css/category.css" rel="stylesheet" />
+}

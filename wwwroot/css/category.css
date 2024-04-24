@@ -1,0 +1,9 @@
+﻿.card-img-top {
+    height: 200px; /* or any other fixed height you prefer */
+    object-fit: cover; /* This will make sure that images cover the area nicely */
+}
+
+/* Optionally, if you need to adjust the card heights uniformly */
+.card {
+    height: 100%; /* Use this to make all cards of equal height */
+}
