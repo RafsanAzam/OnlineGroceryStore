@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/OnlineGroceryStore.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
 
 </head>
 <body>
@@ -48,6 +50,15 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <!-- Place inside the <ul class="navbar-nav flex-grow-1"> -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#cartModal">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="badge bg-primary">0</span> <!-- Replace with @ViewBag.CartCount once it's confirmed to work -->
+                            </a>
+                        </li>
+
+                       
                     </ul>
                 </div>
             </div>
