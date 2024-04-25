@@ -14,6 +14,8 @@ namespace OnlineGroceryStore.Models.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<SubCategory>SubCategories { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -64,6 +66,11 @@ namespace OnlineGroceryStore.Models.Data
                 .IsRequired()
                 .HasMaxLength(50);
 
+            // to define a one-to-many relationship between Cart and CartItems
+            modelBuilder.Entity<Cart>()
+                .HasMany(c => c.CartItems)
+                .WithOne(ci => ci.Cart)
+                .HasForeignKey(ci => ci.CartId);
 
             // Seed data for Categories
             modelBuilder.Entity<Category>().HasData(
