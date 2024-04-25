@@ -23,6 +23,9 @@ body {
 
 .navbar-brand img {
     transition: transform 0.3s ease;
+    Height: 150px; /* adjust if necessary */
+    width: 180px; /* adjust if necessary */
+    object-fit: contain; /* This will make sure the image is fully visible */
 }
 
 .navbar-brand img:hover {

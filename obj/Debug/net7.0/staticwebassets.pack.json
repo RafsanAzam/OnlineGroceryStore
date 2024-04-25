@@ -21,6 +21,86 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file.zip",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file.zip"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file\\pdf\\logo-black.pdf",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file\\pdf\\logo-black.pdf"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file\\pdf\\logo-color.pdf",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file\\pdf\\logo-color.pdf"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file\\pdf\\logo-no-background.pdf",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file\\pdf\\logo-no-background.pdf"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file\\pdf\\logo-white.pdf",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file\\pdf\\logo-white.pdf"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file\\png\\logo-black.png",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file\\png\\logo-black.png"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file\\png\\logo-color.png",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file\\png\\logo-color.png"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file\\png\\logo-no-background.png",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file\\png\\logo-no-background.png"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file\\png\\logo-white.png",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file\\png\\logo-white.png"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file\\svg\\logo-black.svg",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file\\svg\\logo-black.svg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file\\svg\\logo-color.svg",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file\\svg\\logo-color.svg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file\\svg\\logo-no-background.svg",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file\\svg\\logo-no-background.svg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Logo\\uts-mart-logo-zip-file\\svg\\logo-white.svg",
+      "PackagePath": "staticwebassets\\images\\Logo\\uts-mart-logo-zip-file\\svg\\logo-white.svg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Product Images\\AppleJuice.jpg",
+      "PackagePath": "staticwebassets\\images\\Product Images\\AppleJuice.jpg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Product Images\\Carrot.jpg",
+      "PackagePath": "staticwebassets\\images\\Product Images\\Carrot.jpg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Product Images\\CheddarCheese.jpg",
+      "PackagePath": "staticwebassets\\images\\Product Images\\CheddarCheese.jpg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Product Images\\CocaCola.jpg",
+      "PackagePath": "staticwebassets\\images\\Product Images\\CocaCola.jpg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Product Images\\Orange.jpg",
+      "PackagePath": "staticwebassets\\images\\Product Images\\Orange.jpg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Product Images\\Spinach.jpg",
+      "PackagePath": "staticwebassets\\images\\Product Images\\Spinach.jpg"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Product Images\\WholeMilk.jpg",
+      "PackagePath": "staticwebassets\\images\\Product Images\\WholeMilk.jpg"
+    },
+    {
       "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\Trolly.jpg",
       "PackagePath": "staticwebassets\\images\\Trolly.jpg"
     },
