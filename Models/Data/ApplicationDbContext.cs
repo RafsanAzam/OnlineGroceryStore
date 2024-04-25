@@ -87,13 +87,13 @@ namespace OnlineGroceryStore.Models.Data
 
             // Seed data for Products
             modelBuilder.Entity<Product>().HasData(
-                new Product { ProductId = 1, Name = "Orange", Price = 0.50, SubCategoryId = 1, CategoryId = 1, Description = "Fresh Oranges", StockQuantity = 150 },
-                new Product { ProductId = 2, Name = "Carrot", Price = 0.20, SubCategoryId = 2, CategoryId = 2, Description = "Organic Carrots", StockQuantity = 200 },
-                new Product { ProductId = 3, Name = "Spinach", Price = 1.00, SubCategoryId = 3, CategoryId = 2, Description = "Fresh Spinach", StockQuantity = 100 },
-                new Product { ProductId = 4, Name = "Whole Milk", Price = 0.89, SubCategoryId = 4, CategoryId = 3, Description = "Creamy Whole Milk", StockQuantity = 300 },
-                new Product { ProductId = 5, Name = "Cheddar Cheese", Price = 2.50, SubCategoryId = 5, CategoryId = 3, Description = "Aged Cheddar Cheese", StockQuantity = 95 },
-                new Product { ProductId = 6, Name = "Coca Cola", Price = 1.25, SubCategoryId = 6, CategoryId = 4, Description = "Classic Coca Cola", StockQuantity = 500 },
-                new Product { ProductId = 7, Name = "Apple Juice", Price = 1.50, SubCategoryId = 7, CategoryId = 4, Description = "Pure Apple Juice", StockQuantity = 150 }
+                new Product { ProductId = 1, Name = "Orange", Price = 0.50, SubCategoryId = 1, CategoryId = 1, Description = "Fresh Oranges", StockQuantity = 150, ImageUrl = "images/Product Images/Orange.jpg" },
+                new Product { ProductId = 2, Name = "Carrot", Price = 0.20, SubCategoryId = 2, CategoryId = 2, Description = "Organic Carrots", StockQuantity = 200, ImageUrl = "images/Product Images/Carrot.jpg" },
+                new Product { ProductId = 3, Name = "Spinach", Price = 1.00, SubCategoryId = 3, CategoryId = 2, Description = "Fresh Spinach", StockQuantity = 100, ImageUrl = "images/Product Images/Spinach.jpg" },
+                new Product { ProductId = 4, Name = "Whole Milk", Price = 0.89, SubCategoryId = 4, CategoryId = 3, Description = "Creamy Whole Milk", StockQuantity = 300, ImageUrl = "images/Product Images/WholeMilk.jpg" },
+                new Product { ProductId = 5, Name = "Cheddar Cheese", Price = 2.50, SubCategoryId = 5, CategoryId = 3, Description = "Aged Cheddar Cheese", StockQuantity = 95, ImageUrl = "images/Product Images/CheddarCheese.jpg" },
+                new Product { ProductId = 6, Name = "Coca Cola", Price = 1.25, SubCategoryId = 6, CategoryId = 4, Description = "Classic Coca Cola", StockQuantity = 500, ImageUrl = "images/Product Images/CocaCola.jpg" },
+                new Product { ProductId = 7, Name = "Apple Juice", Price = 1.50, SubCategoryId = 7, CategoryId = 4, Description = "Pure Apple Juice", StockQuantity = 150, ImageUrl = "images/Product Images/AppleJuice.jpg" }
             );
 
         }

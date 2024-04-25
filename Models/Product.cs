@@ -9,6 +9,7 @@ namespace OnlineGroceryStore.Models
         [Required]
         [MaxLength(100)]
         public string Name { get; set; }
+        public string ImageUrl { get; set; }
         [Required]
         [DataType(DataType.Currency)]
         public double Price { get; set; }
