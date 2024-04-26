@@ -90,5 +90,12 @@ namespace OnlineGroceryStore.Services
             cart.CartItems.Clear();
             _context.SaveChanges();
         }
+
+        public int GetCartCount(int cartId)
+        {
+            var cart = GetCart(cartId);
+            return cart?.CartItems.Sum(item => item.Quantity) ?? 0;
+        }
+
     }
 }
