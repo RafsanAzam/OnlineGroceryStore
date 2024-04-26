@@ -56,7 +56,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#cartModal">
                                 <i class="fas fa-shopping-cart"></i>
-                                <span class="badge bg-primary">0</span> <!-- Replace with @ViewBag.CartCount once it's confirmed to work -->
+                                <span class="badge bg-primary">@ViewBag.CartCount</span> <!-- Replace with @ViewBag.CartCount once it's confirmed to work -->
                             </a>
                         </li>
                     </ul>
@@ -114,6 +114,14 @@
     // Define a global object to hold action URLs
     var actionUrls = {
         cartIndexUrl: '@Url.Action("Index", "Cart")'
+    };
+
+    window.CartUrls = {
+        addToCartUrl: '@Url.Action("AddToCart", "Cart")',
+        removeFromCartUrl: '@Url.Action("RemoveFromCart", "Cart")',
+        updateQuantityUrl: '@Url.Action("UpdateQuantity", "Cart")',
+        clearCartUrl: '@Url.Action("ClearCart", "Cart")',
+        getCartCountUrl: '@Url.Action("GetCartCount", "Cart")'
     };
 </script>
 <script src="~/js/site.js" asp-append-version="true"></script>

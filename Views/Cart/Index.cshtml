@@ -18,6 +18,56 @@
                     <!-- Add any additional details -->
                 </div>
             </div>
+            <div class="quantity-control">
+                <button class="quantity-decrease" data-cart-item-id="@item.CartItemId">-</button>
+                <span class="quantity-display">@item.Quantity</span>
+                <button class="quantity-increase" data-cart-item-id="@item.CartItemId">+</button>
+            </div>
+
         </li>
     }
 </ul>
+
+<script>
+    $(document).ready(function () {
+        // Decrease item quantity
+        $('.quantity-decrease').click(function () {
+            var cartItemId = $(this).data('cart-item-id');
+            var currentQuantity = parseInt($(this).siblings('.quantity-display').text());
+            if (currentQuantity > 1) {
+                updateCartItemQuantity(cartItemId, currentQuantity - 1);
+            }
+        });
+
+        // Increase item quantity
+        $('.quantity-increase').click(function () {
+            var cartItemId = $(this).data('cart-item-id');
+            var currentQuantity = parseInt($(this).siblings('.quantity-display').text());
+            updateCartItemQuantity(cartItemId, currentQuantity + 1);
+        });
+
+        // Function to update item quantity
+        function updateCartItemQuantity(cartItemId, newQuantity) {
+            $.ajax({
+                url: '/Cart/UpdateQuantity',
+                type: 'POST',
+                data: {
+                    cartItemId: cartItemId,
+                    quantity: newQuantity
+                },
+                success: function (response) {
+                    // Update the quantity display
+                    $('[data-cart-item-id="' + cartItemId + '"]').siblings('.quantity-display').text(newQuantity);
+                    // Optionally, update the cart count and total price if needed
+                    updateCartCount();
+                },
+                error: function (error) {
+                    console.error("Error updating cart item quantity:", error);
+                }
+            });
+        }
+
+        // Other existing JavaScript code...
+    });
+
+</script>
