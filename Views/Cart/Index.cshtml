@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+@model Cart 
+
+<ul class="list-group list-group-flush">
+    @foreach (var item in Model.CartItems)
+    {
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="@Url.Content(item.Product.ImageUrl)" class="img-fluid" alt="@item.Product.Name" />
+                </div>
+                <div class="col-md-8">
+                    <h5>@item.Product.Name</h5>
+                    <p>Price: @item.Product.Price</p>
+                    <p>Quantity: @item.Quantity</p>
+                    <!-- Add any additional details -->
+                </div>
+            </div>
+        </li>
+    }
+</ul>

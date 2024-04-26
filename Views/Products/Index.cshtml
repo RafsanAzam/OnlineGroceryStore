@@ -10,9 +10,29 @@
                     <h5 class="card-title">@product.Name</h5>
                     <p class="card-text">$@product.Price</p>
                     <p class="card-text">@(product.StockQuantity > 0 ? "In Stock" : "Out of Stock")</p>
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart-btn" data-product-id="@product.ProductId">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
         </div>
     }
 </div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.add-to-cart-btn').click(function () {
+                var productId = $(this).data('product-id');
+                var quantity = 1; // Or fetch the quantity from an input if you have one
+
+                $.post('/Cart/AddToCart', { productId: productId, quantity: quantity }, function (response) {
+                    // Handle the response here. For example, update cart count in the UI.
+                    console.log('Product added to cart!');
+                }).fail(function (error) {
+                    // Handle errors here
+                    console.log('Error adding product to cart:', error);
+                });
+            });
+        });
+    </script>
+}

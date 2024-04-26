@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/OnlineGroceryStore.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 
 </head>
@@ -99,5 +101,20 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('#cartModal').on('shown.bs.modal', function (e) {
+                updateCartModal(); // Call the function to update the cart modal
+            });
+        });
+    </script>
 </body>
 </html>
+<script type="text/javascript">
+    // Define a global object to hold action URLs
+    var actionUrls = {
+        cartIndexUrl: '@Url.Action("Index", "Cart")'
+    };
+</script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+

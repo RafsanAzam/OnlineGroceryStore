@@ -17,3 +17,18 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+function updateCartModal() {
+    $.ajax({
+        url: actionUrls.cartIndexUrl, // Use the global URL variable here
+        type: 'GET',
+        success: function (data) {
+            $('#cartModal .modal-body').html(data);
+        },
+        error: function (error) {
+            console.error("Error updating cart modal:", error);
+        }
+    });
+}
+
+

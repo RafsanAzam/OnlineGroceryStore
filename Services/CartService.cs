@@ -16,14 +16,29 @@ namespace OnlineGroceryStore.Services
         public Cart GetCart(int cartId)
         {
             return _context.Carts
-                   .Include(c => c.CartItems)
-                   .ThenInclude(ci => ci.Product)
-                   .FirstOrDefault(c => c.CartId == cartId);
+                           .Include(c => c.CartItems)
+                           .ThenInclude(ci => ci.Product)
+                           .SingleOrDefault(c => c.CartId == cartId);
         }
+
 
         public void AddToCart(int cartId, int productId, int quantity)
         {
             var cart = GetCart(cartId);
+
+            if (cart == null)
+            {
+                cart = new Cart { CartItems = new List<CartItem>() };
+                _context.Carts.Add(cart);
+                _context.SaveChanges(); // Save here so the cart gets an ID from the database
+            }
+
+
+            if (cart.CartItems == null)
+            {
+                cart.CartItems = new List<CartItem>();
+            }
+
             var product = _context.Products.FirstOrDefault(p => p.ProductId == productId);
 
             if (product == null || product.StockQuantity < quantity)
@@ -33,7 +48,7 @@ namespace OnlineGroceryStore.Services
 
             if (cartItem == null)
             {
-                cart.CartItems.Add(new CartItem { ProductId = productId, Quantity = quantity});
+                cart.CartItems.Add(new CartItem { ProductId = productId, Quantity = quantity /*, Price = product.Price*/ });
             }
             else
             {
@@ -42,6 +57,9 @@ namespace OnlineGroceryStore.Services
 
             _context.SaveChanges();
         }
+
+
+
 
         public void RemoveFromCart(int cartId, int cartItemId)
         {
