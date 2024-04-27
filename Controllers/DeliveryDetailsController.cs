@@ -39,7 +39,7 @@ namespace OnlineGroceryStore.Controllers
             var cartItems = cart.CartItems;
 
             // Flag to check if all items are available
-            bool allItemsAvailable = true;
+            //bool allItemsAvailable = true;
 
             // Perform availability check for each item
             foreach (var cartItem in cartItems)
