@@ -31,7 +31,7 @@
                     <ul class="navbar-nav flex-grow-1">
                         @if (!ViewData.ContainsKey("HideSearchBox"))
                         {
-                            <form class="form-inline my-2 my-lg-0 d-flex align-items-center" asp-controller="Products" asp-action="Search" method="get">
+                            <form class="form-inline my-2 my-lg-0 d-flex align-items-center" asp-controller="Search" asp-action="Index" method="get">
                                 <input class="form-control form-control-sm mr-2" type="search" placeholder="Search products" aria-label="Search" name="searchTerm">
                                 <button class="btn btn-outline-success btn-sm my-2 my-sm-0" type="submit">Search</button>
                             </form>
@@ -59,7 +59,12 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#cartModal">
                                 <i class="fas fa-shopping-cart"></i>
-                                <span class="badge bg-primary">@ViewBag.CartCount</span> <!-- Replace with @ViewBag.CartCount once it's confirmed to work -->
+                                <span class="badge bg-primary" id="cart-item-count">
+                                    @Html.Partial("_CartCountPartial")
+                                </span>
+                                
+
+                                <!-- Replace with @ViewBag.CartCount once it's confirmed to work -->
                             </a>
                         </li>
                     </ul>
@@ -99,7 +104,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
-                    <a href="@Url.Action("Index", "DeliveryDetails")" class="btn btn-primary">Proceed to Checkout</a>
+                    <a href="@Url.Action("Index", "DeliveryDetails")" class="btn btn-primary">Place an Order</a>
                 </div>
             </div>
         </div>
@@ -109,6 +114,22 @@
             $('#cartModal').on('shown.bs.modal', function (e) {
                 updateCartModal(); // Call the function to update the cart modal
             });
+            
+            $(document).ready(function () {
+                // Function to fetch the cart count asynchronously
+                function fetchCartCount() {
+                    $.get('/cart/GetTotalProductQuantity', function (response) {
+                        $('#cart-item-count').text(response.TotalQuantity);
+                    });
+                }
+
+                // Call the function initially to fetch and display the cart count
+                fetchCartCount();
+
+                // Optionally, you can refresh the cart count periodically
+                //setInterval(fetchCartCount, 60000); // Refresh every minute (adjust as needed)
+            });
+
         });
     </script>
 </body>
@@ -117,14 +138,6 @@
     // Define a global object to hold action URLs
     var actionUrls = {
         cartIndexUrl: '@Url.Action("Index", "Cart")'
-    };
-
-    window.CartUrls = {
-        addToCartUrl: '@Url.Action("AddToCart", "Cart")',
-        removeFromCartUrl: '@Url.Action("RemoveFromCart", "Cart")',
-        updateQuantityUrl: '@Url.Action("UpdateQuantity", "Cart")',
-        clearCartUrl: '@Url.Action("ClearCart", "Cart")',
-        getCartCountUrl: '@Url.Action("GetCartCount", "Cart")'
     };
 </script>
 <script src="~/js/site.js" asp-append-version="true"></script>

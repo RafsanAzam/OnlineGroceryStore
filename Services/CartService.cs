@@ -18,14 +18,14 @@ namespace OnlineGroceryStore.Services
             return _context.Carts
                            .Include(c => c.CartItems)
                            .ThenInclude(ci => ci.Product)
-                           .SingleOrDefault(c => c.CartId == cartId);
+                           .SingleOrDefault(c => c.CartId == 1);
         }
 
         public void AddToCart(int cartId, int productId, int quantity)
         {
             // Log the product ID and quantity before making the AJAX request
-            Console.WriteLine("Product ID:", productId);
-            Console.WriteLine("Quantity:", quantity);
+            //Console.WriteLine("Product ID:", productId);
+            //Console.WriteLine("Quantity:", quantity);
 
             // First, try to get the cart from the database.
             var cart = GetCart(cartId);
@@ -52,9 +52,10 @@ namespace OnlineGroceryStore.Services
             // If the cart item doesn't exist, create a new one.
             if (cartItem == null)
             {
-                cartItem = new CartItem { ProductId = productId, Quantity = quantity };
-                cart.CartItems.Add(cartItem);
+                    cartItem = new CartItem { ProductId = productId, Quantity = quantity };
+                    cart.CartItems.Add(cartItem);
             }
+
             else
             {
                 // If the cart item exists, just update the quantity.
@@ -67,12 +68,6 @@ namespace OnlineGroceryStore.Services
             // Apply all changes to the database.
             _context.SaveChanges();
         }
-
-
-
-
-
-
 
         public void RemoveFromCart(int cartId, int cartItemId)
         {
@@ -121,6 +116,17 @@ namespace OnlineGroceryStore.Services
         {
             var cart = GetCart(cartId);
             return cart?.CartItems.Sum(item => item.Quantity) ?? 0;
+        }
+
+        public int GetTotalProductQuantity(int cartId)
+        {
+            var cart = GetCart(cartId);
+            if (cart != null)
+            {
+                // Sum up the quantities of all cart items
+                return cart.CartItems.Sum(item => item.Quantity);
+            }
+            return 0; // Return 0 if cart is null or cart has no items
         }
 
     }

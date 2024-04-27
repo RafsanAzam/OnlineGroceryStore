@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["HideCategoryNavigation"] = true;
+}
+
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Search Results";
+}
+
+<h1>Search Results</h1>
+
+@if (Model.Count == 0)
+{
+    <p>No results found.</p>
+}
+else
+{
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="@Url.Content(product.ImageUrl)" class="card-img-top" alt="@product.Name">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">@product.Description</p>
+                        <p class="card-text">Price: $@product.Price</p>
+                        <p class="card-text">@(product.StockQuantity > 0 ? "In Stock" : "Out of Stock")</p>
+                        <p class="card-text">Stock Quantity: @product.StockQuantity</p>
+                        <form asp-action="AddToCart" asp-controller="Cart" method="post">
+                            <input type="hidden" name="productId" value="@product.ProductId" />
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

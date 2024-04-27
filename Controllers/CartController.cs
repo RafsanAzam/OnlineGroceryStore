@@ -10,10 +10,25 @@ public class CartController : Controller
         _cartService = cartService;
     }
 
+    public IActionResult UpdateCartCount()
+    {
+        var cartCount = _cartService.GetTotalProductQuantity(1); // Assuming the cartId is 1
+        ViewBag.CartCount = cartCount;
+        return PartialView("_CartCountPartial", cartCount); // Assuming you have a partial view for cart count
+    }
+
+    public IActionResult AjaxGetTotalProductQuantity()
+    {
+        var cartId = 1; // Assuming a static cart ID for now
+        var totalQuantity = _cartService.GetTotalProductQuantity(cartId);
+        return Json(new { TotalQuantity = totalQuantity });
+    }
+
+
     public IActionResult Index()
     {
         var cart = _cartService.GetCart(1); // Assuming the cartId is 1
-        ViewBag.CartCount = _cartService.GetCartCount(1); // Update the cart count
+        ViewBag.CartCount = _cartService.GetTotalProductQuantity(1); // Update the cart count
         return View(cart);
     }
 
@@ -70,6 +85,14 @@ public class CartController : Controller
         var cartId = 1; // Replace this with actual cart ID retrieval logic
         var cartCount = _cartService.GetCartCount(cartId);
         return Json(cartCount);
+    }
+
+    [HttpGet]
+    public IActionResult GetTotalProductQuantity()
+    {
+        var cartId = 1; // Assuming a static cart ID for now
+        var totalQuantity = _cartService.GetTotalProductQuantity(cartId);
+        return Json(new { TotalQuantity = totalQuantity });
     }
 
 }

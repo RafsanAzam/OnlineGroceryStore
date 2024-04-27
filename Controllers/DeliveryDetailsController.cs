@@ -2,6 +2,7 @@
 using OnlineGroceryStore.Models;
 using OnlineGroceryStore.Models.Data;
 using OnlineGroceryStore.Services;
+using System;
 using System.Linq;
 
 namespace OnlineGroceryStore.Controllers
@@ -28,12 +29,6 @@ namespace OnlineGroceryStore.Controllers
         [HttpPost]
         public IActionResult Index(DeliveryDetails deliveryDetails)
         {
-            if (!ModelState.IsValid)
-            {
-                // If model validation fails, return the view with validation errors
-                return View(deliveryDetails);
-            }
-
             // Check availability of items in the shopping cart
             var cart = _cartService.GetCart(1);
             var cartItems = cart.CartItems;
@@ -63,6 +58,7 @@ namespace OnlineGroceryStore.Controllers
 
             // Redirect to a confirmation page or another step in the checkout process
             //return RedirectToAction("Confirmation");
+
         }
 
         // GET: /DeliveryDetails/Confirmation

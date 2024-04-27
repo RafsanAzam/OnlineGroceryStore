@@ -31,6 +31,7 @@
 </ul>
 
 <div class="cart-total">
+    Total Quantity: <span id="total-quantity"></span> 
     Total Price: <span id="total-price">$@ViewBag.TotalPrice</span>
 </div>
 <div class="cart-actions">
@@ -54,6 +55,22 @@
             var currentQuantity = parseInt($(this).siblings('.quantity-display').text());
             updateCartItemQuantity(cartItemId, currentQuantity + 1);
         });
+
+        // Function to update the total quantity dynamically from the controller
+        function AjaxupdateTotalQuantity() {
+            // Make an AJAX request to fetch the total quantity from the controller
+            $.get('/cart/GetTotalProductQuantity', function (response) {
+                // Update the displayed total quantity based on the response
+                $('#total-quantity').text(response.TotalQuantity);
+            }).fail(function (xhr, status, error) {
+                // Handle any errors that occur during the AJAX request
+                console.error("Failed to fetch total quantity:", error);
+            });
+        }
+
+
+
+       
 
         // Function to update item quantity
         function updateCartItemQuantity(cartItemId, newQuantity) {
