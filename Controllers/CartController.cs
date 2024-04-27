@@ -50,14 +50,19 @@ public class CartController : Controller
         return Json(new { CartCount = cartCount });
     }
 
-    public IActionResult ClearCart()
+    [HttpPost]
+    public IActionResult ClearCart(int cartId)
     {
-        var cartId = 1;
-        _cartService.ClearCart(cartId);
-
-        // Return JSON with new cart count for AJAX call
-        var cartCount = _cartService.GetCartCount(cartId);
-        return Json(new { CartCount = cartCount });
+        try
+        {
+            _cartService.ClearCart(cartId);
+            return RedirectToAction("Index"); // Redirect to cart page or any other page
+        }
+        catch (Exception ex)
+        {
+            // Handle the exception or return an error message
+            return BadRequest(ex.Message);
+        }
     }
 
     public IActionResult GetCartCount()

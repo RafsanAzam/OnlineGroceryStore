@@ -25,6 +25,8 @@
                 var productId = $(this).data('product-id');
                 var quantity = 1; // Or fetch the quantity from an input if you have one
 
+                
+
                 $.post('/Cart/AddToCart', { productId: productId, quantity: quantity }, function (response) {
                     // Handle the response here. For example, update cart count in the UI.
                     console.log('Product added to cart!');
