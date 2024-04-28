@@ -11,19 +11,26 @@
     background-position: center;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 
-.banner-content h1 {
-    font-size: 3rem;
-    color: #fff; /* Choose a text color that stands out */
-    margin-bottom: 1rem;
-    align-items: flex-start;
+.banner-content {
+    justify-content: center;
+    padding-left: 100px;
+
+}
+.banner-content h4 {
+    float: left;
+    text-align: left;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 3.5rem;
 }
 
 .banner-content p {
     font-size: 1.5rem;
-    color: #fff; /* Choose a text color that stands out */
+    color: var(--black); /* Choose a text color that stands out */
     margin-bottom: 2rem;
 }
 

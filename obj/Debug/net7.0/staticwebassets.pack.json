@@ -113,6 +113,10 @@
       "PackagePath": "staticwebassets\\images\\banner2.jpeg"
     },
     {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\beverages.jpg",
+      "PackagePath": "staticwebassets\\images\\beverages.jpg"
+    },
+    {
       "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\cat-1.png",
       "PackagePath": "staticwebassets\\images\\cat-1.png"
     },
@@ -127,6 +131,10 @@
     {
       "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\cat-4.png",
       "PackagePath": "staticwebassets\\images\\cat-4.png"
+    },
+    {
+      "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\dairy.jpg",
+      "PackagePath": "staticwebassets\\images\\dairy.jpg"
     },
     {
       "Id": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\fruits-basket.jpg",

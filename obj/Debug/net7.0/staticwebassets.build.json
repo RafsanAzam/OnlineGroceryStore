@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Vs18mv5Fk2k/YwU/VIGZqFqDNuEOwFQFLWJlOWPAK5M=",
+  "Hash": "ODhkEyp9Jx1ibRwhGmAs6aBFvNkHwSCs02+t5YPprZI=",
   "Source": "OnlineGroceryStore",
   "BasePath": "_content/OnlineGroceryStore",
   "Mode": "Default",
@@ -153,6 +153,23 @@
       "OriginalItemSpec": "wwwroot\\images\\banner2.jpeg"
     },
     {
+      "Identity": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\beverages.jpg",
+      "SourceId": "OnlineGroceryStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\",
+      "BasePath": "_content/OnlineGroceryStore",
+      "RelativePath": "images/beverages.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\beverages.jpg"
+    },
+    {
       "Identity": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\cat-1.png",
       "SourceId": "OnlineGroceryStore",
       "SourceType": "Discovered",
@@ -219,6 +236,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\cat-4.png"
+    },
+    {
+      "Identity": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\dairy.jpg",
+      "SourceId": "OnlineGroceryStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\",
+      "BasePath": "_content/OnlineGroceryStore",
+      "RelativePath": "images/dairy.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\dairy.jpg"
     },
     {
       "Identity": "F:\\2024\\ASP .NET Core MVC Project\\OnlineGroceryStore\\OnlineGroceryStore\\wwwroot\\images\\fruits-basket.jpg",

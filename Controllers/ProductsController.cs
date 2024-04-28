@@ -32,6 +32,14 @@ namespace OnlineGroceryStore.Controllers
             return View(products);
         }
 
+        public async Task<IActionResult> ProductsByCategories()
+        {
+            var categoriesWithProducts = await _context.Categories
+                .Include(c => c.Products) // Include products for each category
+                .ToListAsync();
+
+            return View(ProductsByCategories);
+        }
         public async Task<IActionResult> ProductsBySubCategory(int subCategoryId)
         {
             var products = await _context.Products
