@@ -1,6 +1,7 @@
 ﻿using OnlineGroceryStore.Models.Data;
 using OnlineGroceryStore.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 
 namespace OnlineGroceryStore.Services
 {
@@ -103,6 +104,26 @@ namespace OnlineGroceryStore.Services
                 {
                     // Increment the product stock quantity by the quantity in the cart item
                     product.StockQuantity += cartItem.Quantity;
+                }
+            }
+
+            // Clear the cart items
+            cart.CartItems.Clear();
+
+            _context.SaveChanges();
+        }
+
+        public void SubmitDelivery(int cartId)
+        {
+            var cart = GetCart(cartId);
+
+            foreach (var cartItem in cart.CartItems)
+            {
+                var product = _context.Products.Find(cartItem.ProductId);
+                if (product != null)
+                {
+                    // Increment the product stock quantity by the quantity in the cart item
+                    product.StockQuantity -= cartItem.Quantity;
                 }
             }
 

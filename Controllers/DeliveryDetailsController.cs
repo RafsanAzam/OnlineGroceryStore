@@ -33,9 +33,6 @@ namespace OnlineGroceryStore.Controllers
             var cart = _cartService.GetCart(1);
             var cartItems = cart.CartItems;
 
-            // Flag to check if all items are available
-            //bool allItemsAvailable = true;
-
             // Perform availability check for each item
             foreach (var cartItem in cartItems)
             {
@@ -52,14 +49,15 @@ namespace OnlineGroceryStore.Controllers
             // For example, save delivery details to the database and process the order
             // Clear the cart since all items are available
             _cartService.ClearCart(1);
+
+            // Set flag for successful submission
+            TempData["DeliveryDetailsSubmitted"] = true;
+
             // Redirect to home page with a success message
-            TempData["SuccessMessage"] = "Your order has been placed successfully!";
+            TempData["Success"] = "Your order has been placed & order details is successfully sent to your email!";
             return RedirectToAction("Index", "Home");
-
-            // Redirect to a confirmation page or another step in the checkout process
-            //return RedirectToAction("Confirmation");
-
         }
+
 
         // GET: /DeliveryDetails/Confirmation
         public IActionResult Confirmation()

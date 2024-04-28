@@ -11,8 +11,14 @@
     <link rel="stylesheet" href="~/OnlineGroceryStore.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- toastr CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 </head>
 <body>
@@ -48,16 +54,16 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">About</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">About</a>
                         </li>
                        
                         <!-- Place inside the <ul class="navbar-nav flex-grow-1"> -->
                         <li class="nav-item">
                             <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#cartModal">
                                 <i class="fas fa-shopping-cart"></i>
-                                <span class="badge bg-primary" id="cart-item-count">
+                                @*<span class="badge bg-primary" id="cart-item-count">
                                     @Html.Partial("_CartCountPartial")
-                                </span>
+                                </span>*@
                                 
 
                                 <!-- Replace with @ViewBag.CartCount once it's confirmed to work -->
@@ -70,6 +76,7 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <partial name="_Notification" />
             @RenderBody()
             <!-- Invoke Category Navigation View Component here -->
             @if (!ViewData.ContainsKey("HideCategoryNavigation"))

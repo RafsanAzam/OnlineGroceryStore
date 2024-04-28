@@ -55,13 +55,13 @@
         });
 
 
-
         // Increase item quantity
         $('.quantity-increase').click(function () {
             var cartItemId = $(this).data('cart-item-id');
             var currentQuantity = parseInt($(this).siblings('.quantity-display').text());
             updateCartItemQuantity(cartItemId, currentQuantity + 1);
         });
+
 
 
         // Function to update the total quantity dynamically from the controller
@@ -76,7 +76,7 @@
             });
         }
 
-        
+
 
         // Function to remove item from cart
         function RemoveCartItem(cartItemId) {
@@ -112,7 +112,7 @@
                 }
             });
 
-        
+
         }
         // Function to update the total price
         function updateTotalPrice() {
