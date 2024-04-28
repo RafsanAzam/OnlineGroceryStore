@@ -129,5 +129,28 @@ namespace OnlineGroceryStore.Services
             return 0; // Return 0 if cart is null or cart has no items
         }
 
+        public void RemoveCartItem(int cartItemId)
+        {
+            // Get the cart by cartId
+            var cart = GetCart(1);
+
+            // Find the cart item to remove
+            var cartItemToRemove = cart?.CartItems.FirstOrDefault(ci => ci.CartItemId == cartItemId);
+
+            if (cartItemToRemove != null)
+            {
+                // Remove the cart item from the cart's list of cart items
+                cart.CartItems.Remove(cartItemToRemove);
+
+                // Save the changes to the database
+                _context.SaveChanges();
+            }
+            else
+            {
+                // Handle the case where the cart item to remove is not found
+                throw new InvalidOperationException("Cart item not found.");
+            }
+        }
+
     }
 }

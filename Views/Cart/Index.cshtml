@@ -31,7 +31,7 @@
 </ul>
 
 <div class="cart-total">
-    Total Quantity: <span id="total-quantity"></span> 
+    @*Total Quantity: <span id="total-quantity"></span>*@
     Total Price: <span id="total-price">$@ViewBag.TotalPrice</span>
 </div>
 <div class="cart-actions">
@@ -44,10 +44,17 @@
         $('.quantity-decrease').click(function () {
             var cartItemId = $(this).data('cart-item-id');
             var currentQuantity = parseInt($(this).siblings('.quantity-display').text());
+
+            // Check if the current quantity is greater than 1
             if (currentQuantity > 1) {
                 updateCartItemQuantity(cartItemId, currentQuantity - 1);
+            } else {
+                // If the quantity is 1 or less, remove the item from the cart
+                removeCartItem(cartItemId);
             }
         });
+
+
 
         // Increase item quantity
         $('.quantity-increase').click(function () {
@@ -55,6 +62,7 @@
             var currentQuantity = parseInt($(this).siblings('.quantity-display').text());
             updateCartItemQuantity(cartItemId, currentQuantity + 1);
         });
+
 
         // Function to update the total quantity dynamically from the controller
         function AjaxupdateTotalQuantity() {
@@ -68,9 +76,21 @@
             });
         }
 
+        
 
+        // Function to remove item from cart
+        function RemoveCartItem(cartItemId) {
+            // Make an AJAX request to remove the item from the cart
+            $.post('/Cart/RemoveCartItem', { cartItemId: cartItemId }, function (response) {
+                // If the removal is successful, update the cart count and refresh the cart display
+                updateCartCount();
+                updateCartModal(); // Assuming you have a function to update the cart modal
+            }).fail(function (error) {
+                // Handle errors here
+                console.log('Error removing item from cart:', error);
+            });
+        }
 
-       
 
         // Function to update item quantity
         function updateCartItemQuantity(cartItemId, newQuantity) {
@@ -91,8 +111,9 @@
                     console.error("Error updating cart item quantity:", error);
                 }
             });
-        }
 
+        
+        }
         // Function to update the total price
         function updateTotalPrice() {
             var totalPrice = 0;
@@ -103,22 +124,24 @@
             });
             $('#total-price').text('$' + totalPrice.toFixed(2));
         }
-        $('#clear-cart-btn').click(function () {
-            if (confirm("Are you sure you want to clear your cart?")) {
-                $.ajax({
-                    url: '/Cart/ClearCart',
-                    type: 'POST',
-                    data: { cartId: 1 }, // Pass the cart ID or any other identifier
-                    success: function (response) {
-                        // Handle success, like refreshing the cart display
-                        location.reload(); // Reload the page
-                    },
-                    error: function (error) {
-                        console.error("Error clearing cart:", error);
-                    }
-                });
-            }
-        });
+
+
+    });
+    $('#clear-cart-btn').click(function () {
+        if (confirm("Are you sure you want to clear your cart?")) {
+            $.ajax({
+                url: '/Cart/ClearCart',
+                type: 'POST',
+                data: { cartId: 1 }, // Pass the cart ID or any other identifier
+                success: function (response) {
+                    // Handle success, like refreshing the cart display
+                    location.reload(); // Reload the page
+                },
+                error: function (error) {
+                    console.error("Error clearing cart:", error);
+                }
+            });
+        }
     });
 
 </script>

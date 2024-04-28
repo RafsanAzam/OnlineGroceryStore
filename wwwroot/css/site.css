@@ -68,4 +68,36 @@ body {
 /* Optionally, if you need to adjust the card heights uniformly */
 .card {
     height: 100%; /* Use this to make all cards of equal height */
+    transition: box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Add shadow on hover */
+}
+
+.card-body a:active {
+    /* Add styles for active state when the link is clicked */
+    color: #007bff; /* Change text color to blue */
+}
+
+/* CSS for button hover effect */
+.card-body .btn {
+    transition: background-color 0.3s; /* Add transition for smooth effect */
+}
+
+/* Hover effect for buttons */
+.card-body .btn:hover {
+    background-color: #007bff; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+/* CSS for button hover effect */
+.btn-primary {
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth effect */
+}
+
+/* Hover effect for the submit button */
+.btn-primary:hover {
+    background-color: #0069d9; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
 }

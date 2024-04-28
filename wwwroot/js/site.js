@@ -41,24 +41,9 @@ function updateCartCount() {
             console.error("Error updating cart count:", error);
         }
     });
-    
+
 }
 
-$('.add-to-cart-btn').click(function () {
-    var productId = $(this).data('product-id');
-    var quantity = 1;
-    $.ajax({
-        url: '/Cart/AddToCart',
-        type: 'POST',
-        data: { productId: productId, quantity: quantity },
-        success: function (response) {
-            $('.badge.bg-primary').text(response.CartCount); // assuming the server responds with the new count
-        },
-        error: function (error) {
-            console.error("Error adding to cart:", error);
-        }
-    });
-});
 
 $(document).ready(function () {
     // Decrease item quantity
@@ -118,6 +103,9 @@ $('.quantity-decrease').click(function () {
         updateCartItemQuantity(cartItemId, currentQuantity - 1);
     }
 });
+
+
+
 
 
 

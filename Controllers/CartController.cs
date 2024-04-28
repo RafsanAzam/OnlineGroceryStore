@@ -95,4 +95,26 @@ public class CartController : Controller
         return Json(new { TotalQuantity = totalQuantity });
     }
 
+    [HttpPost]
+    public IActionResult RemoveCartItem(int cartItemId)
+    {
+        try
+        {
+            var cartId = 1; // Assuming a static cart ID for now
+
+            // Call the RemoveFromCart method in the CartService to remove the item from the cart
+            _cartService.RemoveCartItem(cartItemId);
+
+            // Return JSON with the new cart count for AJAX call
+            var cartCount = _cartService.GetCartCount(cartId);
+            return Json(new { CartCount = cartCount });
+        }
+        catch (Exception ex)
+        {
+            // Log the exception or handle it appropriately
+            return BadRequest("Failed to remove item from cart: " + ex.Message);
+        }
+    }
+
+
 }

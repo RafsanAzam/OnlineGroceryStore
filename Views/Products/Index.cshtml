@@ -12,7 +12,8 @@
                     <p class="card-text">$@product.Price</p>
                     <p class="card-text">@(product.StockQuantity > 0 ? "In Stock" : "Out of Stock")</p>
                     <p class="card-text">Stock Quantity: @product.StockQuantity</p>
-                    <button class="btn btn-primary add-to-cart-btn" data-product-id="@product.ProductId">
+                    <button class="btn btn-primary add-to-cart-btn @(product.StockQuantity <= 0 ? "disabled" : "")"
+                            data-product-id="@product.ProductId" @(product.StockQuantity <= 0 ? "disabled" : "")>
                         Add to Cart
                     </button>
                 </div>

@@ -6,4 +6,8 @@
 /* Optionally, if you need to adjust the card heights uniformly */
 .card {
     height: 100%; /* Use this to make all cards of equal height */
+    transition: box-shadow 0.3s; /* Add transition for smooth effect */
+}
+.card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
 }
