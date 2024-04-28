@@ -32,6 +32,16 @@ namespace OnlineGroceryStore.Controllers
             return View(products);
         }
 
+        public async Task<IActionResult> ProductsBySubCategory(int subCategoryId)
+        {
+            var products = await _context.Products
+                .Where(p => p.SubCategoryId == subCategoryId)
+                .ToListAsync();
+
+            return View(products);
+        }
+
+
         public IActionResult Create()
         {
             return View();
