@@ -2,12 +2,12 @@
 The Online Grocery Store with Graphic User Interface is a dynamic web application designed to provide users with a convenient and efficient platform for purchasing groceries online. Developed using ASP.NET Core MVC framework and Entity Framework Core for database management with Microsoft SQL Server Management Studio, this project aims to simulate the experience of shopping for groceries in a virtual environment.
 
 #Technologies Used:
-		Framework: ASP.NET Core MVC
-		Language: C#, Javascript, HTML, CSS, Bootstrap
-		Database: Microsoft SQL Server
-		Database Management Tool: Microsoft SQL Server Management Studio
-		ORM (Object-Relational Mapping): Entity Framework Core
-		Development Environment: Visual Studio
+Framework: ASP.NET Core MVC
+Language: C#, Javascript, HTML, CSS, Bootstrap
+Database: Microsoft SQL Server
+Database Management Tool: Microsoft SQL Server Management Studio
+ORM (Object-Relational Mapping): Entity Framework Core
+Development Environment: Visual Studio
 
 #Key Features:
 
@@ -27,7 +27,8 @@ The Online Grocery Store with Graphic User Interface is a dynamic web applicatio
 			Options to remove items, adjust quantities, and clear the entire cart provide flexibility and control to users.
 			The shopping cart content is preserved for a defined period, allowing users to revisit and modify their cart before placing an order.
 5. Delivery Details Submission:
-			Upon proceeding to checkout, users are directed to a delivery details page where they must provide essential information like recipient's name, address, mobile number, and email address.
+			Upon proceeding to checkout, users are directed to a delivery details page where they must provide essential information like recipient's name, address, mobile number, 
+                        and email address.
 			All details are mandatory for a successful order placement, ensuring accurate delivery and communication.
 6. Order Placement and Confirmation:
 			Users can place orders seamlessly from the shopping cart page once it contains items.
